@@ -9,7 +9,9 @@ class MoolahApplicationTests {
 	//tests if we get the name can the database find all other personal info
 	@Test()
 	public void TestName() {
-
+		//System.out.println("TESTING DATABASE");
+		//MoolahDB database = new MoolahDB();
+		//database.run();
 	}
 	/*
     tests to see if math works for percentages and the amount of money entered in by the user

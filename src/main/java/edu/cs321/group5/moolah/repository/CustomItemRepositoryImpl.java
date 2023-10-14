@@ -7,11 +7,11 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Component;
 
-import edu.cs321.group5.moolah.model.UserData;
+import edu.cs321.group5.moolah.model.UserItem;
 import com.mongodb.client.result.UpdateResult;
 
 @Component
-public class CustomUserRepositoryImpl implements CustomUserRepository {
+public class CustomItemRepositoryImpl implements CustomItemRepository {
 
 	@Autowired
 	MongoTemplate mongoTemplate;
@@ -21,7 +21,7 @@ public class CustomUserRepositoryImpl implements CustomUserRepository {
 		Update update = new Update();
 		update.set("quantity", newQuantity);
 		
-		UpdateResult result = mongoTemplate.updateFirst(query, update, UserData.class);
+		UpdateResult result = mongoTemplate.updateFirst(query, update, UserItem.class);
 		
 		if(result == null)
 			System.out.println("No documents updated");

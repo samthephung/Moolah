@@ -3,8 +3,8 @@ package edu.cs321.group5.moolah.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("UserData")
-public class UserData {
+@Document("UserItem")
+public class UserItem {
 
 
 
@@ -15,7 +15,7 @@ public class UserData {
 		private int quantity;
 		private String category;
 		
-		public UserData(String id, String name, int quantity, String category) {
+		public UserItem(String id, String name, int quantity, String category) {
 			super();
 			this.id = id;
 			this.name = name;
